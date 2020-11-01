@@ -12,7 +12,11 @@
     @include rhythmBorderBottom(1px, 2, $ms-down1);
   }
 
-  a {
+  @include e(menu-link) {
+    display: block;
+    @include setType(3, $ms-down1);
+    padding: emRhythm(1) 0;
     text-decoration: none;
   }
+
 }
