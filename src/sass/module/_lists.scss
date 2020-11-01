@@ -37,3 +37,35 @@
     display: block;
   }
 }
+
+.level-one-nav-list {
+
+  @include e(link) {
+    position: relative;
+    text-decoration: none;
+
+    &:focus {
+      .level-one-nav-list__heading {
+        @include focus-text;
+      }
+    }
+  }
+
+  @include e(heading) {
+    display: inline-block;
+    text-decoration: underline;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  @include e(excerpt) {
+    color: $color-text-secondary;
+  }
+}
