@@ -1034,6 +1034,16 @@ p {
     text-decoration: underline !important; }
     .button--inline:hover {
       background: none; }
+    .button--inline:focus {
+      color: #000;
+      background-color: #FFDD00;
+      box-shadow: 0 -2px #FFDD00, 0 4px #000;
+      text-decoration: none; }
+      .button--inline:focus:hover {
+        color: #000;
+        background-color: #FFDD00;
+        box-shadow: 0 -2px #FFDD00, 0 4px #000;
+        text-decoration: none; }
   .button--github:before {
     margin-right: 10px; }
   .button--toggle-down:after {
@@ -1506,6 +1516,8 @@ p code {
       transform: translateY(-50%);
       position: absolute;
       left: -29px; }
+    .topbar__other-services-link:hover {
+      color: #aeaeae; }
     .topbar__other-services-link:focus:before {
       color: #FFDD00; }
 

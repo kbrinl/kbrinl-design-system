@@ -45,6 +45,14 @@
     &:hover {
       background: none;
     }
+
+    &:focus {
+      @include focus-text;
+
+      &:hover {
+        @include focus-text;
+      }
+    }
   }
 
 

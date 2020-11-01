@@ -61,6 +61,10 @@
       @extend .arrow-right-before;
     }
 
+    &:hover {
+      color: palette(gray-shades, dark-10);
+    }
+
     &:focus {
       &:before {
         color: $color-focus;
