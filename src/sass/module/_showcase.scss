@@ -1,0 +1,46 @@
+pre,
+.code,
+.showcase {
+  padding: emRhythm(4, $ms-down1);
+  padding-top: emRhythm(6, $ms-down1);
+  margin-bottom: emRhythm(5);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem;
+
+    @include setType(1, $ms-down1);
+  }
+}
+
+pre,
+.code {
+  // background-color: palette(white-shades, 10);
+  margin-top: 0;
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+  padding-bottom: emRhythm(4, $ms-down1);
+
+  &::before {
+    content: 'Code';
+    // background-color: palette(white-shades, 20);
+  }
+}
+
+p code {
+  // background-color: palette(white-shades, 10);
+  padding: 0 0.3rem;
+}
+
+.showcase {
+  border: 1px solid $black;
+
+  &::before {
+    // background-color: palette(white-shades, 10);
+    content: 'Example';
+  }
+}

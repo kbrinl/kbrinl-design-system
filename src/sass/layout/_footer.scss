@@ -1,0 +1,51 @@
+.footer {
+  background-color: $black;
+  color: $white;
+  padding-top: emRhythm(10);
+
+  @include e(menu) {
+    margin-bottom: emRhythm(6);
+
+    @include mq(lg) {
+      margin-bottom: emRhythm(10);
+    }
+  }
+
+  @include e(menu-item) {
+    margin-bottom: emRhythm(1);
+    @include mq(lg) {
+      font-weight: normal;
+    }
+  }
+
+  @include e(menu-link) {
+    color: $white;
+
+    &:hover {
+      color: palette(gray-shades, dark-10);
+    }
+  }
+
+  @include e(end) {
+    padding-bottom: emRhythm(2);
+    border-color: palette(gray-shades, dark-20);
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    @include rhythmBorderTop(1px, 4, $ms-down1); //[2]
+  }
+}
+
+#bti-logo-container {
+  text-align: center;
+
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+#bti-logo {
+  width: 6rem;
+  margin-bottom: emRhythm(6);
+}

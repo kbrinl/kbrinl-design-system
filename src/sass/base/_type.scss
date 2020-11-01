@@ -1,0 +1,48 @@
+h1,
+h2,
+.h1, 
+.h2 {
+  margin-bottom: emRhythm(2);
+}
+
+h3, .h3 {
+  margin-bottom: emRhythm(3);
+}
+
+p {
+  max-width: none;
+}
+
+.lead {
+  @extend h4;
+  margin-bottom: emRhythm(4);
+  font-weight: normal;
+}
+
+.mt-1 {
+  margin-top: emRhythm(1);
+}
+
+.mt-2 {
+  margin-top: emRhythm(2);
+}
+
+.mt-3 {
+  margin-top: emRhythm(3);
+}
+
+.mt-4 {
+  margin-top: emRhythm(4);
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-1 {
+  margin-bottom: emRhythm(1);
+}
+
+.mb-2 {
+  margin-bottom: emRhythm(2);
+}

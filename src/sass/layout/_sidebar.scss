@@ -1,0 +1,18 @@
+.sidebar {
+  @include e(heading) {
+    @include setType(5, $ms-down1);
+    font-weight: normal;
+    margin-top: emRhythm(1, $ms-down4);
+    margin-bottom: emRhythm(3, $ms-down1);
+    border-color: palette(gray-shades, dark-10);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-style: solid;
+    @include rhythmBorderBottom(1px, 2, $ms-down1);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

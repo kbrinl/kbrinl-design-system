@@ -1,0 +1,7 @@
+.card {
+  @include m(solid) {
+    background-color: $primary-color;
+    color: $white;
+    padding: emRhythm(5);
+  }
+}

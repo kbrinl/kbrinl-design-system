@@ -1,0 +1,27 @@
+.js .accordion__section {
+  .accordion__section-content {
+    display: none;
+    visibility: hidden;
+  }
+
+  @include m(is-active) {
+    .accordion__section-content {
+      display: block;
+      visibility: visible;
+    }
+  }
+}
+
+.accordion {
+  @include e(section-header) {
+    @include m(topbar) {
+      @include setType(3, $ms-down1);
+    }
+  }
+
+  @include e(section-content) {
+    padding: emRhythm(3) 0;
+    @include m(topbar) {
+    }
+  }
+}

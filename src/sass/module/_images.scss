@@ -1,0 +1,15 @@
+.image {
+  width: 100%;
+  margin: 0;
+}
+
+.image__link {
+  display: block;
+  margin-bottom: emRhythm(1);
+}
+
+.image__link:focus {
+  outline: 4px solid $color-focus;
+  background-color: $color-focus;
+  box-shadow: none;
+}

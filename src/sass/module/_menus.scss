@@ -1,0 +1,111 @@
+.main-menu {
+  padding: emRhythm(2) 0;
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  @include e(section) {
+    @include mq(md) {
+      display: flex;
+    }
+
+    @include m(left) {
+      @include mq(md) {
+        transform: translateX(calc(#{emRhythm(3)} * -1));
+      }
+    }
+    @include m(right) {
+      @include mq(md) {
+        transform: translateX(#{emRhythm(3)});
+      }
+    }
+  }
+
+  @include e(item) {
+    position: relative;
+    padding: emRhythm(2) 0;
+
+    @include mq(md) {
+      padding: emRhythm(2) emRhythm(3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &:hover {
+        &:after {
+          position: absolute;
+          content: "";
+          background-color: $primary-color;
+          width: 100%;
+          left: 0;
+          bottom: 0;
+          height: 3px;
+        }
+      }
+    }
+  }
+
+  @include e(link) {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-text;
+
+    &:hover {
+      color: $color-text;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.main-nav {
+  border-bottom: 1px solid palette(gray-shades, dark-10);
+}
+
+.js .main-nav {
+  display: none;
+  visibility: hidden;
+
+  @include mq(md) {
+    display: block;
+    visibility: visible;
+  }
+
+  @include m(is-active) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.sidebar {
+  @include e(menu-item) {
+    margin-bottom: emRhythm(1);
+
+    @include m(current) {
+      font-weight: bold;
+      padding-left: 1.5rem;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: 1rem;
+        height: 1px;
+        left: 0;
+        background-color: $primary-color;
+        top: calc(50% + 2px);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

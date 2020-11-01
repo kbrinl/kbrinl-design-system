@@ -1,0 +1,39 @@
+.list {
+  @include m(unstyled) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.news-list {
+  margin-bottom: emRhythm(8);
+
+  @include e(item) {
+    padding: emRhythm(2) 0;
+    margin-bottom: emRhythm(4);
+    border-bottom: 1px solid palette(gray-shades, dark-10);
+  }
+
+  @include e(item-category) {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    padding: emRhythm(1) emRhythm(2);
+    @include setType(4, $ms-down1);
+
+    @include m(red) {
+      color: $white;
+      background-color: $red;
+    }
+
+    @include m(blue) {
+      color: $white;
+      background-color: $blue;
+    }
+  }
+
+  @include e(item-date) {
+    display: block;
+  }
+}

@@ -1,0 +1,146 @@
+.skiplink {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  background-color: $color-focus;
+  color: $black;
+  display: inline;
+
+  &:focus {
+    padding: emRhythm(1);
+    left: emRhythm(1);
+    top: emRhythm(1);
+    z-index: 10000;
+    width: auto;
+    height: auto;
+    clip: auto;
+  }
+}
+.topbar {
+  padding: emRhythm(1) 0;
+  background-color: palette(gray-shades, dark-70);
+  border-bottom: 1px solid palette(gray-shades, dark-60);
+  color: palette(gray-shades, dark-10);
+
+  @include e(other-services-item) {
+    padding-left: emRhythm(5);
+
+    &:not(:last-child) {
+      margin-bottom: emRhythm(3);
+    }
+
+    &:last-child {
+      margin-bottom: emRhythm(1);
+    }
+
+    &:not(a) {
+      @include setType(3, $ms-down1);
+
+      @include mq(md) {
+        @include setType(4);
+      }
+    }
+  }
+
+  @include e(other-services-link) {
+    position: relative;
+    display: block;
+    color: $white;
+
+    @include mq(md) {
+      display: inline;
+    }
+    &:before {
+      top: 55%;
+      transform: translateY(-50%);
+      position: absolute;
+      left: -29px;
+      @extend .arrow-right-before;
+    }
+
+    &:focus {
+      &:before {
+        color: $color-focus;
+      }
+    }
+  }
+}
+
+.header {
+  @include e(link) {
+    text-decoration: none;
+    color: $white;
+    display: inline-block;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:focus {
+      color: $color-text;
+    }
+  }
+}
+
+.masthead {
+  background-color: $black;
+  padding: emRhythm(2);
+  border-bottom: emRhythm(1) solid $primary-color;
+
+  @include mq(md) {
+    border-bottom: none;
+  }
+
+  @include e(contents) {
+    display: flex;
+  }
+
+  @include e(home-link) {
+    position: relative;
+  }
+
+  @include e(logo-text) {
+    @extend h4;
+    margin-bottom: 0;
+
+    @include mq(lg) {
+      margin-bottom: emRhythm(1);
+    }
+  }
+
+  @include e(logo) {
+    display: inline-block;
+  }
+
+  @include e(service-title) {
+    @extend h5;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  @include e(menu-button-wrapper) {
+    display: flex;
+  }
+
+  @include e(menu-button) {
+    margin-left: auto;
+    @include setType(4, $ms-down1);
+
+    @include mq(md) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+
+#kbri-logo {
+  height: 3rem;
+  margin-right: 1rem;
+
+  @include mq(lg) {
+    height: 5rem;
+  }
+}

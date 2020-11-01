@@ -1,0 +1,11 @@
+.section {
+  padding: emRhythm(11) 0;
+
+  @include m(gray) {
+    background-color: palette(gray-shades, light-15);
+  }
+}
+
+.hr {
+  border-top: 1px solid palette(gray-shades, dark-10);
+}

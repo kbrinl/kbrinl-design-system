@@ -1,0 +1,23 @@
+.input-group {
+  @include m(embedded-button) {
+    position: relative;
+  }
+
+  @include e(text) {
+    @include m(embedded-button) {
+      width: calc(100% - 2.37rem);
+    }
+  }
+
+  @include e(button) {
+
+    @include m(embedded-button) {
+      @extend .search-icon;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      padding: 0 0.93rem;
+    }
+  }
+}
+

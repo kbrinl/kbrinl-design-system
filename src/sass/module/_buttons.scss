@@ -1,0 +1,110 @@
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 3px;
+  border: none;
+  padding: emRhythm(2) emRhythm(3);
+  border: 1px solid palette(gray-shades, dark-60);
+  font-family: $font-sans;
+  @include setType(3);
+  background-color: $primary-color;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    cursor: pointer;
+    background-color: $color-hover;
+  }
+
+  &:focus {
+    @include focus-text;
+  }
+
+  // Button sizing
+
+  @include m(small) {
+    padding: emRhythm(1) emRhythm(2);
+    font-weight: normal;
+  }
+
+  @include m(large) {
+    padding: emRhythm(2); 
+    font-weight: bold;
+
+    @include mq(md) {
+      @include setType(4, $ms-up1);
+    }
+  }
+
+  @include m(inline) {
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: underline !important;
+
+    &:hover {
+      background: none;
+    }
+  }
+
+
+  // Buttons with icons
+
+  @include m(github){
+    &:before {
+      margin-right: 10px;
+      @extend .github-icon-before;
+    }
+  }
+
+  @include m(toggle-down) {
+    &:after {
+      display: inline;
+      text-decoration: none;
+      margin-left: 5px;
+      color: $primary-color;
+      @extend .angle-down-icon;
+    } 
+  }
+
+  @include m(toggle-up) {
+    &:after {
+      display: inline;
+      text-decoration: none;
+      margin-left: 5px;
+      color: $primary-color;
+      @extend .angle-up-icon;
+    } 
+  }
+
+  @include m(action) {
+    &:after {
+      margin-left: 10px;
+      transform: translateY(2px);
+      @extend .angle-double-right-icon-after;
+    }
+  }
+
+  @include m(secondary) {
+    background-color: palette(gray-shades, light-10);
+    color: $color-text;
+
+    &:hover {
+      background-color: palette(gray-shades, dark-10);
+    }
+  }
+
+  @include m(white) {
+    background-color: $white;
+    color: $color-text;
+
+    &:hover {
+      background-color: palette(gray-shades, light-10);
+      color: $color-text;
+    }
+  }
+  
+  @include m(error) {
+    background-color: $color-error;
+  }
+}

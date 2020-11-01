@@ -1,0 +1,69 @@
+$fa-font-path: "../fonts";
+
+@import "fontawesome/fontawesome";
+@import "fontawesome/regular";
+@import "fontawesome/solid";
+@import "fontawesome/brands";
+
+.angle-down-icon {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:after {
+    content: fa-content($fa-var-angle-down);
+  }
+}
+
+.angle-up-icon {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:after {
+    content: fa-content($fa-var-angle-up);
+  }
+}
+
+.arrow-right-before {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-arrow-right);
+  }
+}
+
+.arrow-right-before-circle {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-arrow-circle-right);
+  }
+}
+
+.search-icon {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-search);
+  }
+}
+
+.angle-double-right-icon-after {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:after {
+    content: fa-content($fa-var-angle-double-right);
+  }
+}
+
+.github-icon-before {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-github);
+  }
+}

@@ -1,0 +1,47 @@
+a {
+  color: $primary-color;
+}
+
+a:focus {
+  @include focus-text;
+}
+
+a:hover {
+  color: $color-hover;
+}
+
+.link--circle-arrow-before {
+  position: relative;
+  padding-left: 2rem;
+
+  &:before {
+    position: absolute;
+    left: 0rem;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+    @extend .arrow-right-before-circle;
+  }
+}
+
+.link--circle-arrow-before-large {
+  position: relative;
+  padding-left: 2.5rem;
+  display: inline-block;
+  margin-bottom: emRhythm(5);
+
+  @include mq(md) {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    position: absolute;
+    left: 0rem;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+    @extend .arrow-right-before-circle;
+  }
+}
