@@ -5,8 +5,9 @@ h2,
   margin-bottom: emRhythm(2);
 }
 
-h3, .h3 {
-  margin-bottom: emRhythm(3);
+h3, .h3,
+h4, .h4 {
+  margin-bottom: emRhythm(2);
 }
 
 p {
@@ -15,7 +16,7 @@ p {
 
 .lead {
   @extend h4;
-  margin-bottom: emRhythm(4);
+  margin-bottom: emRhythm(5);
   font-weight: normal;
 }
 
@@ -35,6 +36,14 @@ p {
   margin-top: emRhythm(4);
 }
 
+.mt-5 {
+  margin-top: emRhythm(5);
+}
+
+.mt-8 {
+  margin-top: emRhythm(8);
+}
+
 .mb-0 {
   margin-bottom: 0;
 }
@@ -45,4 +54,12 @@ p {
 
 .mb-2 {
   margin-bottom: emRhythm(2);
+}
+
+.mb-3 {
+  margin-bottom: emRhythm(3);
+}
+
+.mb-4 {
+  margin-bottom: emRhythm(4);
 }
