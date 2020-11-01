@@ -20,7 +20,8 @@
     font-weight: bold;
     display: inline-block;
     padding: emRhythm(1) emRhythm(2);
-    @include setType(4, $ms-down1);
+    margin-bottom: emRhythm(3);
+    @include setType(4, $ms-down2);
 
     @include m(red) {
       color: $white;
