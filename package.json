@@ -2,7 +2,7 @@
   "name": "kbrinl-design-system",
   "version": "0.17.0",
   "description": "",
-  "main": "index.js",
+  "main": "_index.scss",
   "scripts": {
     "html": "cpx \"*.html\" dist/",
     "watch:html": "cpx \"*.html\" dist/ --watch",
