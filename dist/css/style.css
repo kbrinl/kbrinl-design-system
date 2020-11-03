@@ -1223,6 +1223,14 @@ p {
     opacity: 0;
     background: currentColor; }
 
+.radios--inline {
+  display: inline; }
+
+.radios--inline .radios__item {
+  float: left;
+  clear: none;
+  margin-right: 20px; }
+
 .radios__input:checked + .radios__label:after {
   opacity: 1; }
 
