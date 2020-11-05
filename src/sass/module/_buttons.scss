@@ -20,6 +20,11 @@
     @include focus-text;
   }
 
+  @include m(hidden) {
+    display: none;
+    visibility: hidden;
+  }
+
   // Button sizing
 
   @include m(small) {
@@ -98,6 +103,7 @@
     color: $color-text;
 
     &:hover {
+      color: $color-text;
       background-color: palette(gray-shades, dark-10);
     }
   }
@@ -115,4 +121,8 @@
   @include m(error) {
     background-color: $color-error;
   }
+}
+
+button[type="submit"] {
+  margin-top: emRhythm(3);
 }

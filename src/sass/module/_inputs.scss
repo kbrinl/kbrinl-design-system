@@ -102,13 +102,18 @@
     margin-bottom: 0;
   }
 
+  @include m(inline-input) {
+    margin-bottom: emRhythm(4);
+  }
+
   @include m(error) {
     padding-left: emRhythm(4);
     border-left: 5px solid $error;
   }
 }
 
-.date-input {
+.date-input,
+.inline-input {
   @include e(item) {
     display: inline-block;
     margin-right: emRhythm(2);
@@ -191,11 +196,14 @@
   margin-right: 20px;
 }
 
+.radios__input:focus + .radios__label:before {
+  box-shadow: 0 0 0 4px $color-focus;
+}
+
 .radios__input:checked + .radios__label:after {
   opacity: 1;
 }
 
 .radios__input:checked + .radios__label:before {
   border-width: 4px;
-  box-shadow: 0 0 0 4px $color-focus;
 }
