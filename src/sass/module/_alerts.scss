@@ -20,3 +20,19 @@
     font-weight: bold;
   }
 }
+
+.callout {
+  padding: emRhythm(4);
+  margin-bottom: emRhythm(8);
+  background-color: palette(gray-shades, light-15);
+  border-left: emRhythm(2) solid $primary-color;
+
+  @include m(success) {
+    border-left: emRhythm(2) solid $success;
+  }
+  
+  @include e(body) {
+    margin: 0;
+  }
+}
+

@@ -93,13 +93,13 @@
   @include m(action) {
     &:after {
       margin-left: 10px;
-      transform: translateY(2px);
+      transform: translateY(1px);
       @extend .angle-double-right-icon-after;
     }
   }
 
   @include m(secondary) {
-    background-color: palette(gray-shades, light-10);
+    background-color: palette(gray-shades, light-15);
     color: $color-text;
 
     &:hover {
@@ -113,7 +113,7 @@
     color: $color-text;
 
     &:hover {
-      background-color: palette(gray-shades, light-10);
+      background-color: palette(gray-shades, light-15);
       color: $color-text;
     }
   }
@@ -121,8 +121,26 @@
   @include m(error) {
     background-color: $color-error;
   }
+
+  @include m(toggle) {
+    background-color: palette(gray-shades, light-10);
+    color: $black;
+  }
 }
 
 button[type="submit"] {
   margin-top: emRhythm(3);
+}
+
+.button-group {
+  @include m(vertical) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include m(date-options) {
+    flex-wrap: wrap;
+    height: 14rem;
+    align-content: baseline;
+  }
 }

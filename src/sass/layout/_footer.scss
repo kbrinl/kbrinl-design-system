@@ -1,7 +1,11 @@
 .footer {
   background-color: $black;
   color: $white;
-  padding-top: emRhythm(10);
+  padding: emRhythm(10);
+
+  @include m(ribbon) {
+    border-top: emRhythm(2) solid $primary-color;
+  }
 
   @include e(menu) {
     margin-bottom: emRhythm(6);
@@ -9,10 +13,26 @@
     @include mq(lg) {
       margin-bottom: emRhythm(10);
     }
+
+    @include m(horizontal) {
+      @include mq(lg) {
+        display: flex;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include m(white) {
+    border-top: 1px solid palette(gray-shades, dark-10);
+    background-color: palette(gray-shades, light-15);
+    color: $black;
+  }
+
+  @include e(about-site) {
   }
 
   @include e(menu-item) {
-    margin-bottom: emRhythm(1);
+    margin-bottom: emRhythm(4);
     @include mq(lg) {
       font-weight: normal;
     }
@@ -24,10 +44,17 @@
     &:hover {
       color: palette(gray-shades, dark-10);
     }
+
+    @include m(black) {
+      color: $black;
+
+      &:hover {
+        color: palette(gray-shades, dark-40);
+      }
+    }
   }
 
   @include e(end) {
-    padding-bottom: emRhythm(2);
     border-color: palette(gray-shades, dark-20);
     border-style: solid;
     border-left: none;
@@ -35,10 +62,42 @@
     border-bottom: none;
     @include rhythmBorderTop(1px, 4, $ms-down1); //[2]
   }
+
+  @include e(copyright-info) {
+    @include setType(4, $ms-down1);
+  }
+
+  @include e(logo) {
+    width: 7rem;
+    margin-bottom: emRhythm(6);
+
+    @include m(horizontal) {
+      width: 5rem;
+
+      @include mq(md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include e(logo-text) {
+    @include setType(3, $ms-down1);
+    margin-left: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: bold;
+  }
+}
+
+
+.footer-menu__item--horizontal {
+  padding-right: 1rem;
+  @include setType(4, $ms-down1);
 }
 
 #bti-logo-container {
   text-align: center;
+  display: flex;
 
   @include mq(md) {
     text-align: left;
@@ -46,6 +105,5 @@
 }
 
 #bti-logo {
-  width: 6rem;
-  margin-bottom: emRhythm(6);
+  width: 4rem;
 }

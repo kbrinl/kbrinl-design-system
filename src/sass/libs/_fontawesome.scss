@@ -10,8 +10,19 @@ $fa-font-path: "../fonts";
   @extend .fas;
 
   &:after {
+  @extend %fa-icon;
+  @extend .fas;
     content: fa-content($fa-var-angle-down);
   }
+
+  @include m(before) {
+    &:before {
+  @extend %fa-icon;
+  @extend .fas;
+      content: fa-content($fa-var-angle-down);
+    }
+  }
+
 }
 
 .angle-up-icon {

@@ -1,8 +1,16 @@
 .section {
-  padding: emRhythm(11) 0;
+  padding: emRhythm(4) 0;
+
+  @include mq(md) {
+    padding: emRhythm(8) 0;
+  }
+
+  @include mq(lg) {
+    padding: emRhythm(14) 0;
+  }
 
   @include m(gray) {
-    background-color: palette(gray-shades, light-15);
+    background-color: palette(gray-shades, light-20);
   }
 }
 
